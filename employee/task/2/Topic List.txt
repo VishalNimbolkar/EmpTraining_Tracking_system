@@ -1,0 +1,23 @@
+IEEE Topics
+======================================================
+
+1. Scalable and Secure Sharing of Personal Health records in Cloud Computing Using Attribute Based Encryption
+
+2. An Ontology-Based Text-Mining Method to Cluster Proposals for Research Project Selection
+
+3. Malicious URL Detection and Identification
+
+4.Information Retrieval using Relevance Feedback Algorithm,Vector Space Model
+
+5.The application of artificial intelligence in antivirus detection system
+ 
+6.Privacy Policy Inference of User-Uploaded Images on Content Sharing Sites
+
+7.LARS*: An Efficient and Scalable Location-Aware Recommender System
+
+
+Application Based Topics
+======================================================
+Smart Blood Donor
+Farmer Buddy
+Fingerprint Based ATM System
