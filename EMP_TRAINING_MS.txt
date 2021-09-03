@@ -1,0 +1,122 @@
+USE [EMP_TRAINING_MS]
+GO
+/****** Object:  Table [dbo].[GroupData]    Script Date: 07/03/2020 7:50:09 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[GroupData](
+	[gid] [int] IDENTITY(1,1) NOT NULL,
+	[groupname] [nvarchar](50) NULL,
+ CONSTRAINT [PK_GroupData] PRIMARY KEY CLUSTERED 
+(
+	[gid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Marks]    Script Date: 07/03/2020 7:50:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Marks](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[empid] [int] NULL,
+	[username] [nvarchar](50) NULL,
+	[task] [nvarchar](max) NULL,
+	[analysis] [int] NULL,
+	[designing] [int] NULL,
+	[coding] [int] NULL,
+	[testing] [int] NULL,
+	[obtain_marks] [int] NULL,
+	[total_marks] [int] NULL,
+ CONSTRAINT [PK_Marks] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Msg]    Script Date: 07/03/2020 7:50:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Msg](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[msgfrom] [nvarchar](50) NULL,
+	[msgto] [nvarchar](50) NULL,
+	[sub] [nvarchar](50) NULL,
+	[msg] [nvarchar](50) NULL,
+	[msgdate] [nvarchar](50) NULL,
+	[status] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Msg] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Reg_Demo]    Script Date: 07/03/2020 7:50:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Reg_Demo](
+	[empid] [int] NULL,
+	[name] [nvarchar](50) NULL,
+	[email] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Registration]    Script Date: 07/03/2020 7:50:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Registration](
+	[empid] [int] NOT NULL,
+	[empname] [nvarchar](50) NULL,
+	[dob] [nvarchar](50) NULL,
+	[gender] [nvarchar](50) NULL,
+	[address] [nvarchar](50) NULL,
+	[emailid] [nvarchar](50) NULL,
+	[mobile] [nvarchar](50) NULL,
+	[username] [nvarchar](50) NULL,
+	[pwd] [nvarchar](50) NULL,
+	[photo] [nvarchar](50) NULL,
+	[status] [nvarchar](50) NULL,
+	[company] [nvarchar](max) NULL,
+	[groupname] [nvarchar](50) NULL,
+	[interested_area] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Registration] PRIMARY KEY CLUSTERED 
+(
+	[empid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Task]    Script Date: 07/03/2020 7:50:10 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Task](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[taskid] [int] NULL,
+	[task] [nvarchar](50) NULL,
+	[date1] [nvarchar](50) NULL,
+	[username] [nvarchar](50) NULL,
+	[user_status] [nvarchar](50) NULL,
+	[admin_status] [nvarchar](50) NULL,
+	[doc_path] [nvarchar](50) NULL,
+	[reason] [nvarchar](max) NULL,
+	[last_date] [nvarchar](50) NULL,
+ CONSTRAINT [PK_Task] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
